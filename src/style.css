@@ -1,0 +1,33 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: center;
+    gap: 128px;
+    font-size: 1.2rem;
+}
+
+header > *{
+    margin: 16px;
+}
