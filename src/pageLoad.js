@@ -1,3 +1,7 @@
+import displayContact from "./contactContent";
+import displayHome from "./homeContent";
+import displayMenu from "./menuContent";
+
 const pageLoad = function() {
     const content = document.getElementById('content');
     const header = createHeader();
@@ -18,15 +22,33 @@ function createHeader() {
         // Home 
         const homeNav = document.createElement('li');
         homeNav.textContent = 'Home';
+        homeNav.addEventListener('click', () => {
+            const content = document.getElementById('content');
+            if (content.firstChild.id === 'home-page') return;
+            content.removeChild(content.firstChild);
+            displayHome();
+        });
     
         // Menu
         const menuNav = document.createElement('li');
         menuNav.textContent = 'Menu';
+        menuNav.addEventListener('click', () => {
+            const content = document.getElementById('content');
+            if (content.firstChild.id === 'menu-page') return;
+            content.removeChild(content.firstChild);
+            displayMenu();
+        });
     
         // Contact
         const contactNav = document.createElement('li');
         contactNav.textContent = 'Contact';
-    
+        contactNav.addEventListener('click', () => {
+            const content = document.getElementById('content');
+            if (content.firstChild.id === 'contact-page') return;
+            content.removeChild(content.firstChild);
+            displayContact();
+        });
+
         // Append elements
         ul.appendChild(homeNav);
         ul.appendChild(menuNav);

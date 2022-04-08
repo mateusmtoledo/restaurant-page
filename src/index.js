@@ -5,4 +5,4 @@ import displayMenu from './menuContent.js';
 import displayContact from './contactContent.js';
 
 pageLoad();
-displayContact();
+displayHome();

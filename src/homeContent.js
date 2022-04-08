@@ -1,8 +1,9 @@
 const displayHome = function() {
     const content = document.getElementById('content');
-    content.appendChild(hours());
-    content.appendChild(about());
-    content.appendChild(location());
+    const div = document.createElement('div');
+    div.id = 'home-page';
+    div.append(hours(), about(), location());
+    content.appendChild(div);
 }
 
 function hours() {

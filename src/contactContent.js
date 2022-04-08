@@ -1,6 +1,9 @@
 function displayContact() {
     const content = document.getElementById('content');
-    content.append(messageSection(), info());
+    const div = document.createElement('div');
+    div.id = 'contact-page';
+    div.append(messageSection(), info());
+    content.appendChild(div);
 }
 
 function messageSection() {

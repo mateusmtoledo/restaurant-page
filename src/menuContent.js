@@ -1,6 +1,9 @@
 function displayMenu() {
     const content = document.getElementById('content');
-    content.appendChild(menu());
+    const div = document.createElement('div');
+    div.id = 'menu-page';
+    div.appendChild(menu());
+    content.appendChild(div);
 }
 
 function menu() {
