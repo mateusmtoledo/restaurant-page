@@ -1,6 +1,6 @@
 function displayContact() {
     const content = document.getElementById('content');
-    content.appendChild(messageSection());
+    content.append(messageSection(), info());
 }
 
 function messageSection() {
@@ -44,11 +44,30 @@ function messageSection() {
     const button = document.createElement('button');
     button.textContent = 'Send';
 
-
     // Append elements
     container.appendChild(form);
     form.append(h2, nameField, emailField, textField, button);
     
+    return container;
+}
+
+function info() {
+    const container = document.createElement('div');
+
+    const h2 = document.createElement('h2');
+    h2.textContent = 'Contact Us';
+
+    const email = document.createElement('p');
+    email.textContent = 'E-mail: restaurant-email@restaurant.com';
+
+    const address = document.createElement('p');
+    address.textContent = 'Restaurant Street, 123';
+
+    const phone = document.createElement('p');
+    phone.textContent = '123-456-7890';
+
+    container.append(h2, email, address, phone);
+
     return container;
 }
 
