@@ -1,8 +1,10 @@
+import restaurantImg from './images/restaurant.jpg';
+
 const displayHome = function() {
     const content = document.getElementById('content');
     const div = document.createElement('div');
     div.id = 'home-page';
-    div.append(hours(), about(), location());
+    div.append(about(), hours(), location());
     content.appendChild(div);
 }
 
@@ -35,12 +37,14 @@ function hours() {
 
 function about() {
     const container = document.createElement('div');
+    const img = document.createElement('img');
+    img.src = restaurantImg;
     const h2 = document.createElement('h2');
-    h2.textContent = 'About Us';
+    h2.textContent = 'About us';
     const p = document.createElement('p');
     p.textContent = 'Maecenas vitae urna nec erat tempus pellentesque et sit amet ipsum. Sed tempus justo et risus porta condimentum. Vivamus finibus, risus eget vehicula posuere, ligula elit facilisis turpis, ut pellentesque massa elit et nisi. Pellentesque accumsan odio id nisi hendrerit imperdiet. Aliquam erat volutpat. Nunc quis lectus vel nunc consequat elementum. Phasellus volutpat mollis accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc sem lacus, iaculis id metus vel, auctor consectetur nunc. Duis lacinia id libero scelerisque vulputate. Sed consequat tortor nec lobortis volutpat. Nunc consequat vulputate euismod. Praesent quis vehicula enim.';
     
-    container.append(h2, p);
+    container.append(img, h2, p);
 
     return container;
 }
