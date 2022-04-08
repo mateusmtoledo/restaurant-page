@@ -8,6 +8,7 @@ const displayHome = function() {
 
 function hours() {
     const container = document.createElement('div');
+    container.classList.add('hours');
     const h2 = document.createElement('h2');
     h2.textContent = 'Hours';
 
@@ -37,7 +38,7 @@ function about() {
     const h2 = document.createElement('h2');
     h2.textContent = 'About Us';
     const p = document.createElement('p');
-    p.textContent = 'Maecenas vitae urna nec erat tempus pellentesque et sit amet ipsum. Sed tempus justo et risus porta condimentum. Vivamus finibus, risus eget vehicula posuere, ligula elit facilisis turpis, ut pellentesque massa elit et nisi. Pellentesque accumsan odio id nisi hendrerit imperdiet. Aliquam erat volutpat. Nunc quis lectus vel nunc consequat elementum. Phasellus volutpat mollis accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc sem lacus, iaculis id metus vel, auctor consectetur nunc. Duis lacinia id libero scelerisque vulputate. Sed consequat tortor nec lobortis volutpat. Nunc consequat vulputate euismod. Praesent quis vehicula enim. Vivamus accumsan congue sapien. Quisque venenatis varius nunc, porta cursus mi varius sit amet.';
+    p.textContent = 'Maecenas vitae urna nec erat tempus pellentesque et sit amet ipsum. Sed tempus justo et risus porta condimentum. Vivamus finibus, risus eget vehicula posuere, ligula elit facilisis turpis, ut pellentesque massa elit et nisi. Pellentesque accumsan odio id nisi hendrerit imperdiet. Aliquam erat volutpat. Nunc quis lectus vel nunc consequat elementum. Phasellus volutpat mollis accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc sem lacus, iaculis id metus vel, auctor consectetur nunc. Duis lacinia id libero scelerisque vulputate. Sed consequat tortor nec lobortis volutpat. Nunc consequat vulputate euismod. Praesent quis vehicula enim.';
     
     container.append(h2, p);
 
@@ -48,8 +49,9 @@ function location() {
     const container = document.createElement('div');
     const h2 = document.createElement('h2');
     h2.textContent = 'Location';
-    
-    container.append(h2);
+    const p = document.createElement('p');
+    p.textContent = 'Restaurant Street, 123, 12345'
+    container.append(h2, p);
 
     return container;
 }
