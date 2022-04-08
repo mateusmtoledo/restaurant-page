@@ -21,10 +21,9 @@ let imgs = [
 
 function displayMenu() {
     const content = document.getElementById('content');
-    const div = document.createElement('div');
-    div.id = 'menu-page';
-    div.appendChild(menu());
-    content.appendChild(div);
+    const menuPage = menu();
+    menuPage.id = 'menu-page';
+    content.appendChild(menuPage);
 }
 
 function menu() {
@@ -53,6 +52,7 @@ function cardCreator(name, index, text) {
     // Card picture
     card.image = document.createElement('img');
     card.image.src = imgs[index];
+    card.image.id = `img-${index}`;
 
     // Card text
     card.text = document.createElement('p');
