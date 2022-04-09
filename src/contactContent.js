@@ -45,7 +45,8 @@ function messageSection() {
 
     // Submit button
     const button = document.createElement('button');
-    button.textContent = 'Send';
+    button.textContent = 'Submit';
+    button.setAttribute('type', 'button');
 
     // Append elements
     container.appendChild(form);
